@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
           etEuro.requestFocusFromTouch();
 
           etDolar.setEnabled(false);
-          rbDolarAEuro.setEnabled(false);
+          rbDolarAEuro.setChecked(false);
       }
 
     }
@@ -62,14 +62,25 @@ public class MainActivity extends AppCompatActivity {
         if(rbDolarAEuro.isChecked())
         {
             double dolares =Double.valueOf(etDolar.getText().toString());
-            String res=String.valueOf(dolares * 0.85) + "Euros";
+            String res=String.valueOf(dolares * 0.85) + " Euros";
             cambio.setText(res);
+            etDolar.setText("");
+            etEuro.setText("");
+            etDolar.setEnabled(false);
+            rbDolarAEuro.setChecked(false);
+            rbEuroADolar.setChecked(false);
         }
         else
             {
                 double euros=Double.valueOf(etEuro.getText().toString());
-                String res= String.valueOf(euros*1.18)+ "Dolares";
+                String res= String.valueOf(euros*1.18)+ " Dolares";
                 cambio.setText(res);
+                etEuro.setText("");
+                etDolar.setText("");
+                etEuro.setEnabled(false);
+                rbDolarAEuro.setChecked(false);
+                rbEuroADolar.setChecked(false);
+
             }
 
 

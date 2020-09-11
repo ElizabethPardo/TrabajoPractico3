@@ -54,6 +54,12 @@
         android:layout_marginTop="12dp"
         android:layout_below="@+id/etEuros">
 
+        <RadioButton
+            android:id="@+id/rbDólaresAEuros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dólares a Euros"
+            android:onClick="cambiarEstado"/>
     <RadioButton
         android:id="@+id/rbEurosADolares"
         android:layout_width="wrap_content"
@@ -61,12 +67,7 @@
         android:text="Euros a Dólares"
         android:onClick="cambiarEstado"/>
 
-    <RadioButton
-        android:id="@+id/rbDólaresAEuros"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dólares a Euros"
-        android:onClick="cambiarEstado"/>
+
 
     </RadioGroup>
 
